@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body, 
+#root {
+  @apply bg-lightBackgroundGrey box-border;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-rose-900 rounded-xl;
+}
+
+.task > ::-webkit-scrollbar-thumb {
+  @apply bg-sky-500 rounded-xl;
+}
+
+@layer components {
+
+  .button {
+    @apply bg-mainPurple py-2 px-4 rounded-full text-white text-L font-semibold hover:bg-mainPurpleHover duration-200;
+  }
+
+  .button-primary-sm {
+    @apply rounded-full bg-mainPurple text-white text-S hover:bg-mainPurpleHover;
+  }
+
+  .button-secondary {
+    @apply rounded-lg text-mainPurple;
+    background-color: rgba(99, 95, 199, 0.1);
+  }
+
+  .button-secondary:hover {
+    background-color: rgba(99, 95, 199, 0.25);
+  }
+
+  .button-destructive {
+    @apply rounded-lg bg-red text-white text-S hover:bg-redHover;
+  }
+  
+ 
+}
