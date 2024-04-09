@@ -34,7 +34,7 @@ function TaskModal({ taskIndex, colIndex, setIsTaskModalOpen }: TaskModalProps) 
   });
 
   const [status, setStatus] = useState<string>(task?.status ?? '');
-  const [newColIndex, setNewColIndex] = useState<number>(columns ? columns.indexOf(column) : -1);
+  const [newColIndex, setNewColIndex] = useState<number>(column && columns ? columns.indexOf(column) : -1);
 
   const onChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setStatus(e.target.value);
